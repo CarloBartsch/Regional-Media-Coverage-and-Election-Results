@@ -1,0 +1,3595 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\admin\Documents\Wahlen und Medien\Data\Media Distribution Gesamt.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Media Distribution Gesamt.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Stamm-&#xA;gemeinde&#xA;GKZ" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Stamm-&#xA;gemeinde&#xA;Name" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Einwohner" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Haushalte" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="ZIS-Nr." size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Belegungseinheit" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Gesamtauflage" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Standort-&#xA;Auflage" size="255" source="File: (Multiple Sources)" type="V_String" />
+            <Field name="Jahr" size="254" source="Formula: (Multiple Sources)" type="V_WString" />
+            <Field name="Haus-&#xA;halts-&#xA;Index" source="File: (Multiple Sources)" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\admin\Documents\Wahlen und Medien\Data\Election Result Kreis Gesamt.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Election Result Kreis Gesamt.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="Land" size="254" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="GKZ" size="254" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="Kreis " size="254" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="Wahlberechtigte" size="254" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="Wähler" size="254" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="Ungültig" source="Formula: IF [_CurrentFieldName_] IN(&quot;Kreis &quot;,&quot;A18&quot;) THEN   &#xA;       IF IsNull([_CurrentField_]) THEN &#xA;	    IF ( [_CurrentFieldType_] IN ('Byte', 'Int16', 'Int32', 'Int64', 'Float', 'Double', 'FixedDecimal')) THEN&#xA;       	0&#xA;    	    ELSE [_CurrentField_]&#xA;	    ENDIF&#xA;	ELSE [_CurrentField_]&#xA;	ENDIF&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="Int32" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="Gültig" source="Formula: IF [_CurrentFieldName_] IN(&quot;Kreis &quot;,&quot;A18&quot;) THEN   &#xA;       IF IsNull([_CurrentField_]) THEN &#xA;	    IF ( [_CurrentFieldType_] IN ('Byte', 'Int16', 'Int32', 'Int64', 'Float', 'Double', 'FixedDecimal')) THEN&#xA;       	0&#xA;    	    ELSE [_CurrentField_]&#xA;	    ENDIF&#xA;	ELSE [_CurrentField_]&#xA;	ENDIF&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="Int32" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="SPD" source="Formula: IF [_CurrentFieldName_] IN(&quot;Kreis &quot;,&quot;A18&quot;) THEN   &#xA;       IF IsNull([_CurrentField_]) THEN &#xA;	    IF ( [_CurrentFieldType_] IN ('Byte', 'Int16', 'Int32', 'Int64', 'Float', 'Double', 'FixedDecimal')) THEN&#xA;       	0&#xA;    	    ELSE [_CurrentField_]&#xA;	    ENDIF&#xA;	ELSE [_CurrentField_]&#xA;	ENDIF&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="Int32" />
+            <Field name="CDU/CSU" source="Formula: [CDU]+[CSU]" type="Int32" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="Grüne" source="Formula: IF [_CurrentFieldName_] IN(&quot;Kreis &quot;,&quot;A18&quot;) THEN   &#xA;       IF IsNull([_CurrentField_]) THEN &#xA;	    IF ( [_CurrentFieldType_] IN ('Byte', 'Int16', 'Int32', 'Int64', 'Float', 'Double', 'FixedDecimal')) THEN&#xA;       	0&#xA;    	    ELSE [_CurrentField_]&#xA;	    ENDIF&#xA;	ELSE [_CurrentField_]&#xA;	ENDIF&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="Int32" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="FDP" source="Formula: IF [_CurrentFieldName_] IN(&quot;Kreis &quot;,&quot;A18&quot;) THEN   &#xA;       IF IsNull([_CurrentField_]) THEN &#xA;	    IF ( [_CurrentFieldType_] IN ('Byte', 'Int16', 'Int32', 'Int64', 'Float', 'Double', 'FixedDecimal')) THEN&#xA;       	0&#xA;    	    ELSE [_CurrentField_]&#xA;	    ENDIF&#xA;	ELSE [_CurrentField_]&#xA;	ENDIF&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="Int32" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="Die Linke" source="Formula: IF [_CurrentFieldName_] IN(&quot;Kreis &quot;,&quot;A18&quot;) THEN   &#xA;       IF IsNull([_CurrentField_]) THEN &#xA;	    IF ( [_CurrentFieldType_] IN ('Byte', 'Int16', 'Int32', 'Int64', 'Float', 'Double', 'FixedDecimal')) THEN&#xA;       	0&#xA;    	    ELSE [_CurrentField_]&#xA;	    ENDIF&#xA;	ELSE [_CurrentField_]&#xA;	ENDIF&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="Int32" />
+            <Field name="Andere" source="Formula: [A1]+[A2]+[A3]+[A4]+[A5]+[A6]+[A7]+[A8]+[A9]+[A10]+[A11]+[A12]+[A13]+[A14]+[A15]+[A16]+[A17]+[A18]" type="Int32" />
+            <Field name="Jahr" size="1073741823" source="Formula: (Multiple Sources)" type="V_WString" />
+            <Field name="Monat" size="1073741823" source="Formula: (Multiple Sources)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="258" y="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="If [Jahr]='1998' then 1998 &#xA;elseif [Jahr]='2000' then 1998&#xA;elseif [Jahr]='2002' then 2002&#xA;elseif [Jahr]='2004' then 2005&#xA;elseif [Jahr]='2006' then 2005&#xA;elseif [Jahr]='2008' then 2005&#xA;elseif [Jahr]='2010' then 2009&#xA;elseif [Jahr]='2012' then 2009&#xA;else 2013&#xA;endif&#xA;" field="Join Jahr" size="1073741823" type="V_WString" />
+            <FormulaField expression="IF Length([Stamm-&#xA;gemeinde&#xA;GKZ])=7 then '0'+[Stamm-&#xA;gemeinde&#xA;GKZ] else [Stamm-&#xA;gemeinde&#xA;GKZ]&#xA;endif" field="Stamm-&#xA;gemeinde&#xA;GKZ" size="255" type="V_String" />
+            <FormulaField expression="Length([Stamm-&#xA;gemeinde&#xA;GKZ])" field="Lenght" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Da zwischen den Zweitstimmendaten (Jahre jeweils zur Wahl) und den Media Distribution Daten (Jahre im 2 Jahres Rhytmus) eine Abweichung besteht, z.B. 2004 und 2006 bei Media aber Wahl war 2005, muss Jahresspalte angeglichen werden</AnnotationText>
+          <DefaultAnnotationText>Join Jahr = If [Jahr]='1998' then 1998 
+elseif [Jahr]='2000' then 1998
+elseif [J...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="138" y="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="534" y="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsNull([Stamm-
+gemeinde
+GKZ])</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotNull</Operator>
+            <Field>Stamm-
+gemeinde
+GKZ</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2019-12-17 14:32:14</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2019-12-17 14:32:14</StartDate>
+              <EndDate>2019-12-17 14:32:14</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([Stamm-
+gemeinde
+GKZ])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="366" y="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Lenght] != "8"</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>!=</Operator>
+            <Field>Lenght</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2019-12-18 10:47:36</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>8</Operand>
+              <StartDate>2019-12-18 10:47:36</StartDate>
+              <EndDate>2019-12-18 10:47:36</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Lenght] != "8"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="978" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Stamm-&#xA;gemeinde&#xA;GKZ" action="GroupBy" rename="Stamm-&#xA;gemeinde&#xA;GKZ" />
+            <SummarizeField field="Belegungseinheit" action="GroupBy" rename="Belegungseinheit" />
+            <SummarizeField field="Jahr" action="GroupBy" rename="Jahr" />
+            <SummarizeField field="Join Jahr" action="GroupBy" rename="Join Jahr" />
+            <SummarizeField field="Gesamtauflage" action="Sum" rename="Sum_Gesamtauflage" />
+            <SummarizeField field="Standort-&#xA;Auflage" action="Sum" rename="Sum_Standort-&#xA;Auflage" />
+            <SummarizeField field="Einwohner" action="Sum" rename="Sum_Einwohner" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Einwohner" selected="True" type="Double" size="8" />
+            <SelectField field="Gesamtauflage" selected="True" type="Double" size="8" />
+            <SelectField field="Standort-&#xA;Auflage" selected="True" type="Double" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="702" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Left([Stamm-&#xA;gemeinde&#xA;GKZ],5)" field="Stamm-&#xA;gemeinde&#xA;GKZ" size="255" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Stamm-
+gemeinde
+GKZ = Left([Stamm-
+gemeinde
+GKZ],5)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="942" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Stamm-&#xA;gemeinde&#xA;GKZ" />
+            <Field field="Join Jahr" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="GKZ" />
+            <Field field="Jahr" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Jahr" selected="True" rename="Right_Jahr" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="70">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1062" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Join Jahr" action="GroupBy" rename="Join Jahr" />
+            <SummarizeField field="Jahr" action="GroupBy" rename="Jahr" />
+            <SummarizeField field="Land" action="GroupBy" rename="Land" />
+            <SummarizeField field="GKZ" action="GroupBy" rename="GKZ" />
+            <SummarizeField field="Kreis " action="GroupBy" rename="Kreis " />
+            <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+            <SummarizeField field="Value" action="Avg" rename="Value" />
+            <SummarizeField field="Belegungseinheit" action="GroupBy" rename="Belegungseinheit" />
+            <SummarizeField field="Sum_Einwohner" action="Sum" rename="Sum_Einwohner" />
+            <SummarizeField field="Monat" action="GroupBy" rename="Monat" />
+            <SummarizeField field="Sum_Standort-&#xA;Auflage" action="Sum" rename="Sum_Standort-&#xA;Auflage" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1158" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Join Jahr" selected="True" rename="Join Jahr Zweitstimme" />
+            <SelectField field="Monat" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1278" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>Contains([Belegungseinheit],"BILD") or
+Contains([Belegungseinheit],"DIE WELT") or
+Contains([Belegungseinheit],"Frankfurter Allgemeine Zeitung") or
+Contains([Belegungseinheit],"Frankfurter Rundschau") or
+Contains([Belegungseinheit],"Süddeutsche Zeitung") or
+Contains([Belegungseinheit],"die tageszeitung")</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>Contains</Operator>
+            <Field>Belegungseinheit</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-01-15 14:35:01</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>BILD + B.Z.</Operand>
+              <StartDate>2020-01-15 14:35:01</StartDate>
+              <EndDate>2020-01-15 14:35:01</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Contains([Belegungseinheit],"BILD") or
+Contains([Belegungseinheit],"DIE WELT") o...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1398" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF Contains([Belegungseinheit],'BILD') then 'Bild'&#xA;elseif Contains([Belegungseinheit],'DIE WELT') then 'Die Welt'&#xA;elseif Contains([Belegungseinheit],'Frankfurter Allgemeine Zeitung') then 'F.A.Z.'&#xA;elseif Contains([Belegungseinheit],'Frankfurter Rundschau') then 'Fr. Rundschau'&#xA;elseif Contains([Belegungseinheit],'Süddeutsche Zeitung') then 'Süddeutsche'&#xA;else 'tageszeitung'&#xA;endif&#xA;" field="Belegungseinheit Join" size="1073741823" type="V_WString" />
+            <FormulaField expression="IF Partei='CDU' then 'Union' else [Partei] endif  " field="Partei" size="14" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Belegungseinheit Join = IF Contains([Belegungseinheit],'BILD') then 'Bild'
+elsei...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="1170" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\admin\Documents\Wahlen und Medien\Data\Panel_Tonalität.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Panel_Tonalität.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="MONAT" size="19" source="Summarize: GroupBy - MONAT" type="V_WString" />
+            <Field description="Parteien" name="P_GROUP" size="22" source="Summarize: GroupBy - P_GROUP" type="V_WString" />
+            <Field name="MEDIUM" size="23" source="Summarize: GroupBy - MEDIUM" type="V_WString" />
+            <Field name="Summe Wertung" source="Summarize: Sum - Summe Wertung" type="Int64" />
+            <Field name="Anzahl Wertung" source="Summarize: Sum - Anzahl Wertung" type="Int64" />
+            <Field name="Tonalität" source="Formula: [Summe Wertung]/[Anzahl Wertung]" type="Double" />
+            <Field name="DateTime_Month" source="DateTime: To yyyyMM" type="Date" />
+            <Field description="Formula: IF [Row-1:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-1,'months'),10) then [Row-1:Tonalität]&#xA;else Null()&#xA;endif" name="Tonalität-1" scale="3" size="19" source="Formula: IF [Row-1:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-1,'months'),10) then [Row-1:Tonalität]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+            <Field description="Formula: IF [Row-2:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-2,'months'),10) then [Row-2:Tonalität]&#xA;else Null()&#xA;endif" name="Tonalität-2" scale="3" size="19" source="Formula: IF [Row-2:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-2,'months'),10) then [Row-2:Tonalität]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+            <Field description="Formula: IF [Row-3:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-3,'months'),10) then [Row-3:Tonalität]&#xA;else Null()&#xA;endif" name="Tonalität-3" scale="3" size="19" source="Formula: IF [Row-3:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-3,'months'),10) then [Row-3:Tonalität]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+            <Field description="Formula: IF [Row-4:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-4,'months'),10) then [Row-4:Tonalität]&#xA;else Null()&#xA;endif" name="Tonalität-4" scale="3" size="19" source="Formula: IF [Row-4:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-4,'months'),10) then [Row-4:Tonalität]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+            <Field description="Formula: IF [Row-5:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-5,'months'),10) then [Row-5:Tonalität]&#xA;else Null()&#xA;endif" name="Tonalität-5" scale="3" size="19" source="Formula: IF [Row-5:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-5,'months'),10) then [Row-5:Tonalität]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+            <Field description="Formula: IF [Row-6:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-6,'months'),10) then [Row-6:Tonalität]&#xA;else Null()&#xA;endif" name="Tonalität-6" scale="3" size="19" source="Formula: IF [Row-6:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-6,'months'),10) then [Row-6:Tonalität]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+            <Field description="Formula: IF [Row-7:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-7,'months'),10) then [Row-7:Tonalität]&#xA;else Null()&#xA;endif" name="Tonalität-7" scale="3" size="19" source="Formula: IF [Row-7:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-7,'months'),10) then [Row-7:Tonalität]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+            <Field description="Formula: IF [Row-8:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-8,'months'),10) then [Row-8:Tonalität]&#xA;else Null()&#xA;endif" name="Tonalität-8" scale="3" size="19" source="Formula: IF [Row-8:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-8,'months'),10) then [Row-8:Tonalität]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+            <Field description="Formula: IF [Row-9:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-9,'months'),10) then [Row-9:Tonalität]&#xA;else Null()&#xA;endif" name="Tonalität-9" scale="3" size="19" source="Formula: IF [Row-9:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-9,'months'),10) then [Row-9:Tonalität]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+            <Field description="Formula: IF [Row-3:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-3,'months'),10) then ([Tonalität]+[Row-1:Tonalität]+[Row-2:Tonalität]+[Row-3:Tonalität])/4&#xA;else Null()&#xA;endif" name="Avg_Tonalität_3" source="Formula: IF [Row-3:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-3,'months'),10) then ([Tonalität]+[Row-1:Tonalität]+[Row-2:Tonalität]+[Row-3:Tonalität])/4&#xA;else Null()&#xA;endif" type="Double" />
+            <Field description="Formula: IF [Row-1:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-1,'months'),10) then ([Tonalität]+[Row-1:Tonalität])/2&#xA;else Null()&#xA;endif" name="Avg_Tonalität_1" source="Formula: IF [Row-1:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-1,'months'),10) then ([Tonalität]+[Row-1:Tonalität])/2&#xA;else Null()&#xA;endif" type="Double" />
+            <Field description="Formula: IF [Row-2:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-2,'months'),10) then ([Tonalität]+[Row-1:Tonalität]+[Row-2:Tonalität])/3&#xA;else Null()&#xA;endif" name="Avg_Tonalität_2" source="Formula: IF [Row-2:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-2,'months'),10) then ([Tonalität]+[Row-1:Tonalität]+[Row-2:Tonalität])/3&#xA;else Null()&#xA;endif" type="Double" />
+            <Field description="Formula: IF [Row-6:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-6,'months'),10) then ([Tonalität]+[Row-1:Tonalität]+[Row-2:Tonalität]+[Row-3:Tonalität]+[Row-4:Tonalität]+[Row-5:Tonalität]+[Row-6:Tonalität])/7&#xA;else Null()&#xA;endif" name="Avg_Tonalität_6" source="Formula: IF [Row-6:DateTime_Month] = Left(DateTimeAdd([DateTime_Month],-6,'months'),10) then ([Tonalität]+[Row-1:Tonalität]+[Row-2:Tonalität]+[Row-3:Tonalität]+[Row-4:Tonalität]+[Row-5:Tonalität]+[Row-6:Tonalität])/7&#xA;else Null()&#xA;endif" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1410" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF Left([MONAT], 4) = '1998' then 1998&#xA;elseif Left([MONAT], 4) = '1999' then 1998&#xA;elseif Left([MONAT], 4) = '2000' then 2000&#xA;elseif Left([MONAT], 4) = '2001' then 2000&#xA;elseif Left([MONAT], 4) = '2002' then 2002&#xA;elseif Left([MONAT], 4) = '2003' then 2002&#xA;elseif Left([MONAT], 4) = '2004' then 2004&#xA;elseif Left([MONAT], 4) = '2005' then 2004&#xA;elseif Left([MONAT], 4) = '2006' then 2006&#xA;elseif Left([MONAT], 4) = '2007' then 2006&#xA;elseif Left([MONAT], 4) = '2008' then 2008&#xA;elseif Left([MONAT], 4) = '2009' then 2008&#xA;elseif Left([MONAT], 4) = '2010' then 2010&#xA;elseif Left([MONAT], 4) = '2011' then 2010&#xA;else 2012&#xA;endif&#xA;&#xA;" field="Join Jahr PCI" size="1073741823" type="V_WString" />
+            <FormulaField expression="if [Partei]='Bündnis 90/Die Grüne' then 'Grüne' elseif &#xA;[Partei]= 'CDU/CSU' then 'Union' elseif&#xA;[Partei]= 'Linke/PDS/WASG' then 'Linke' &#xA;elseif [Partei]= 'Andere Parteien' then 'Andere'&#xA;else&#xA;[Partei] &#xA;endif" field="Partei" size="22" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[Da Media + Zweitstimme auf Jahresbasis und PCI auf Monatsbasis muss erst ein Datumsfeld zum Join erstellt werden
+]]></AnnotationText>
+          <DefaultAnnotationText>Join Jahr PCI = IF Left([MONAT], 4) = '1998' then 1998
+elseif Left([MONAT], 4) =...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="76">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1254" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="P_GROUP" selected="True" rename="Partei" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="77">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1530" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Jahr" />
+            <Field field="Partei" />
+            <Field field="Belegungseinheit Join" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Join Jahr PCI" />
+            <Field field="Partei" />
+            <Field field="MEDIUM" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_MONAT" selected="True" rename="Right_MONAT" input="Right_" />
+                <SelectField field="Right_Partei" selected="True" rename="Right_Partei" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="78">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1818" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Join Jahr Zweitstimme" selected="False" />
+            <SelectField field="Jahr" selected="False" />
+            <SelectField field="Belegungseinheit" selected="False" />
+            <SelectField field="Belegungseinheit Join" selected="False" />
+            <SelectField field="Right_MONAT" selected="True" rename="Monat" />
+            <SelectField field="Summe Wertung" selected="False" />
+            <SelectField field="Join Jahr PCI" selected="False" />
+            <SelectField field="Right_Jahr" selected="False" />
+            <SelectField field="Right_GKZ" selected="False" />
+            <SelectField field="Sum_Wahlberechtigte ohne Sperrvermerk A1" selected="False" />
+            <SelectField field="Sum_Wahlberechtigte mit Sperrvermerk A2" selected="False" />
+            <SelectField field="Sum_Anzahl der Wahlberechtigten A§" selected="False" />
+            <SelectField field="Sum_Anzahl der Wähler B" selected="False" />
+            <SelectField field="Sum_Anzahl der Wähler mit Wahlschein B1" selected="False" />
+            <SelectField field="P_GROUP" selected="False" />
+            <SelectField field="Right_P_GROUP" selected="False" />
+            <SelectField field="Right_Summe Wertung" selected="False" />
+            <SelectField field="Right_Anzahl Wertung" selected="False" />
+            <SelectField field="Right_Tonalität" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="79">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2298" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="([Sum_Standort-&#xA;Auflage]*100)/[Sum_Einwohner]" field="Standortauflage je 100 Einwohner" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Standortauflage je 100 Einwohner = ([Sum_Standort-
+Auflage]*100)/[Sum_Einwohner]...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="80">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="2394" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Numeric</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Tonalität" />
+            <Field name="Tonalität-1" />
+            <Field name="Tonalität-2" />
+            <Field name="Tonalität-3" />
+            <Field name="Tonalität-4" />
+            <Field name="Tonalität-5" />
+            <Field name="Tonalität-6" />
+            <Field name="Tonalität-7" />
+            <Field name="Tonalität-8" />
+            <Field name="Tonalität-9" />
+            <Field name="Avg_Tonalität_3" />
+            <Field name="Avg_Tonalität_1" />
+            <Field name="Avg_Tonalität_2" />
+            <Field name="Avg_Tonalität_6" />
+            <Field name="Value" selected="False" />
+            <Field name="Sum_Einwohner" selected="False" />
+            <Field name="Sum_Standort-&#xA;Auflage" selected="False" />
+            <Field name="Anzahl Wertung" selected="False" />
+            <Field name="Right_Sum_Standort-&#xA;Auflage" selected="False" />
+            <Field name="Standortauflage je 100 Einwohner" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <NewFieldAddOn>Gew_</NewFieldAddOn>
+          <NewFieldAddOnPos>Prefix</NewFieldAddOnPos>
+          <CopyOutput value="True" />
+          <Expression>[_CurrentField_]*[Standortauflage je 100 Einwohner]</Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[_CurrentField_]*[Standortauflage je 100 Einwohner]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="81">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1890" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="MONAT" action="GroupBy" rename="MONAT" />
+            <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+            <SummarizeField field="Kreis " action="GroupBy" rename="Kreis " />
+            <SummarizeField field="Sum_Standort-&#xA;Auflage" action="Sum" rename="Sum_Standort-&#xA;Auflage" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="82">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="2178" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Kreis " />
+            <Field field="Monat" />
+            <Field field="Partei" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Kreis " />
+            <Field field="MONAT" />
+            <Field field="Partei" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_MONAT" selected="False" rename="Right_MONAT" input="Right_" />
+                <SelectField field="Right_Partei" selected="False" rename="Right_Partei" input="Right_" />
+                <SelectField field="Right_Kreis " selected="True" rename="Right_Kreis " input="Right_" />
+                <SelectField field="Right_Sum_Standort-&#xA;Auflage" selected="True" rename="Right_Sum_Standort-&#xA;Auflage" input="Right_" />
+                <SelectField field="Right_Wahlkreis" selected="True" rename="Right_Wahlkreis" input="Right_" />
+                <SelectField field="Right_GKZ" selected="False" rename="Right_GKZ" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="3630" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="GKZ" />
+            <Field field="Datum" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="GKZ" />
+            <Field field="Monat" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Right_GKZ" selected="True" rename="Left_Right_GKZ" input="Left_" />
+                <SelectField field="Left_Left_Right_GKZ" selected="True" rename="Left_Left_Right_GKZ" input="Left_" />
+                <SelectField field="Left_Right_Jahr" selected="True" rename="Left_Right_Jahr" input="Left_" />
+                <SelectField field="Right_GKZ" selected="True" rename="Right_GKZ" input="Right_" />
+                <SelectField field="Right_Jahr" selected="True" rename="Right_Jahr" input="Right_" />
+                <SelectField field="Right_Bundesland" selected="True" rename="Right_Bundesland" input="Right_" />
+                <SelectField field="Right_Einwohner" selected="True" rename="Right_Einwohner" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Join Passt. Es gehen nur zeilen aus den Jahren 2000 und 2001 verloren</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="86">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2802" y="570" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Left([MONAT],4)" field="Jahr" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Jahr = Left([MONAT],4)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="87">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="4110" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="GKZ" />
+            <Field field="Kreisname" />
+            <Field field="BIP je Einwohner" />
+            <Field field="Jahr" />
+            <Field field="ALQ" />
+            <Field field="Partei" />
+            <Field field="Value" />
+            <Field field="Monat" />
+            <Field field="ZZ Ausland Prozent je Einwohner" />
+          </GroupFields>
+          <HeaderField field="MEDIUM" />
+          <DataField field="Gew_Avg_Tonalität_1" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="GKZ" size="255" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Kreisname" size="255" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="BIP je Einwohner" scale="1" size="19" source="CrossTab:Group:Sum:" type="FixedDecimal" />
+            <Field name="Jahr" size="1073741823" source="CrossTab:Group:Sum:" type="V_WString" />
+            <Field name="ALQ" scale="1" size="19" source="CrossTab:Group:Sum:" type="FixedDecimal" />
+            <Field name="Partei" size="14" source="CrossTab:Group:Sum:" type="String" />
+            <Field name="Value" source="CrossTab:Group:Sum:" type="Double" />
+            <Field name="Monat" size="19" source="CrossTab:Group:Sum:" type="V_WString" />
+            <Field name="ZZ Ausland Prozent je Einwohner" scale="3" size="19" source="CrossTab:Group:Sum:" type="FixedDecimal" />
+            <Field name="Bild" source="CrossTab:Header:MEDIUM:Bild:Sum:" type="Double" />
+            <Field name="Die_Welt" source="CrossTab:Header:MEDIUM:Die Welt:Sum:" type="Double" />
+            <Field name="F_A_Z_" source="CrossTab:Header:MEDIUM:F.A.Z.:Sum:" type="Double" />
+            <Field name="Fr__Rundschau" source="CrossTab:Header:MEDIUM:Fr. Rundschau:Sum:" type="Double" />
+            <Field name="Süddeutsche" source="CrossTab:Header:MEDIUM:Süddeutsche:Sum:" type="Double" />
+            <Field name="tageszeitung" source="CrossTab:Header:MEDIUM:tageszeitung:Sum:" type="Double" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="GKZ" order="Asc" />
+            <Field field="Kreisname" order="Asc" />
+            <Field field="BIP je Einwohner" order="Asc" />
+            <Field field="Jahr" order="Asc" />
+            <Field field="ALQ" order="Asc" />
+            <Field field="Partei" order="Asc" />
+            <Field field="Value" order="Asc" />
+            <Field field="Monat" order="Asc" />
+            <Field field="ZZ Ausland Prozent je Einwohner" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="88">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="4206" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="GKZ" action="GroupBy" rename="GKZ" />
+            <SummarizeField field="Kreisname" action="GroupBy" rename="Kreisname" />
+            <SummarizeField field="Jahr" action="GroupBy" rename="Jahr" />
+            <SummarizeField field="MONAT" action="GroupBy" rename="MONAT" />
+            <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+            <SummarizeField field="ZZ Ausland Prozent je Einwohner" action="AvgNo0" rename="AvgNo0_ZZ Ausland Prozent je Einwohner" />
+            <SummarizeField field="value" action="AvgNo0" rename="value" />
+            <SummarizeField field="BIP je Einwohner" action="AvgNo0" rename="AvgNo0_BIP je Einwohner" />
+            <SummarizeField field="ALQ" action="AvgNo0" rename="ALQ" />
+            <SummarizeField field="Die_Welt" action="AvgNo0" rename="Welt_1" />
+            <SummarizeField field="F_A_Z_" action="AvgNo0" rename="FAZ_1" />
+            <SummarizeField field="Fr__Rundschau" action="AvgNo0" rename="FR_1" />
+            <SummarizeField field="Süddeutsche" action="AvgNo0" rename="SZ_1" />
+            <SummarizeField field="tageszeitung" action="AvgNo0" rename="TZ_1" />
+            <SummarizeField field="Bild" action="AvgNo0" rename="Bild_1" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="89">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="3918" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[MONAT] = "200209" or 
+[MONAT] = "200509"</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Monat</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-04-17 11:10:26</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2020-04-17 11:10:26</StartDate>
+              <EndDate>2020-04-17 11:10:26</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[MONAT] = "200209" or 
+[MONAT] = "200509"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="90">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="4014" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="91">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="4110" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="GKZ" />
+            <Field field="Kreisname" />
+            <Field field="BIP je Einwohner" />
+            <Field field="Jahr" />
+            <Field field="ALQ" />
+            <Field field="Partei" />
+            <Field field="Value" />
+            <Field field="Monat" />
+            <Field field="ZZ Ausland Prozent je Einwohner" />
+          </GroupFields>
+          <HeaderField field="MEDIUM" />
+          <DataField field="Gew_Avg_Tonalität_2" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="GKZ" size="255" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Kreisname" size="255" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="BIP je Einwohner" scale="1" size="19" source="CrossTab:Group:Sum:" type="FixedDecimal" />
+            <Field name="Jahr" size="1073741823" source="CrossTab:Group:Sum:" type="V_WString" />
+            <Field name="ALQ" scale="1" size="19" source="CrossTab:Group:Sum:" type="FixedDecimal" />
+            <Field name="Partei" size="14" source="CrossTab:Group:Sum:" type="String" />
+            <Field name="Value" source="CrossTab:Group:Sum:" type="Double" />
+            <Field name="Monat" size="19" source="CrossTab:Group:Sum:" type="V_WString" />
+            <Field name="ZZ Ausland Prozent je Einwohner" scale="3" size="19" source="CrossTab:Group:Sum:" type="FixedDecimal" />
+            <Field name="Bild" source="CrossTab:Header:MEDIUM:Bild:Sum:" type="Double" />
+            <Field name="Die_Welt" source="CrossTab:Header:MEDIUM:Die Welt:Sum:" type="Double" />
+            <Field name="F_A_Z_" source="CrossTab:Header:MEDIUM:F.A.Z.:Sum:" type="Double" />
+            <Field name="Fr__Rundschau" source="CrossTab:Header:MEDIUM:Fr. Rundschau:Sum:" type="Double" />
+            <Field name="Süddeutsche" source="CrossTab:Header:MEDIUM:Süddeutsche:Sum:" type="Double" />
+            <Field name="tageszeitung" source="CrossTab:Header:MEDIUM:tageszeitung:Sum:" type="Double" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="GKZ" order="Asc" />
+            <Field field="Kreisname" order="Asc" />
+            <Field field="BIP je Einwohner" order="Asc" />
+            <Field field="Jahr" order="Asc" />
+            <Field field="ALQ" order="Asc" />
+            <Field field="Partei" order="Asc" />
+            <Field field="Value" order="Asc" />
+            <Field field="Monat" order="Asc" />
+            <Field field="ZZ Ausland Prozent je Einwohner" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="92">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="4206" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="GKZ" action="GroupBy" rename="GKZ" />
+            <SummarizeField field="Kreisname" action="GroupBy" rename="Kreisname" />
+            <SummarizeField field="Jahr" action="GroupBy" rename="Jahr" />
+            <SummarizeField field="MONAT" action="GroupBy" rename="MONAT" />
+            <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+            <SummarizeField field="ZZ Ausland Prozent je Einwohner" action="AvgNo0" rename="AvgNo0_ZZ Ausland Prozent je Einwohner" />
+            <SummarizeField field="value" action="AvgNo0" rename="value" />
+            <SummarizeField field="BIP je Einwohner" action="AvgNo0" rename="AvgNo0_BIP je Einwohner" />
+            <SummarizeField field="ALQ" action="AvgNo0" rename="ALQ" />
+            <SummarizeField field="Die_Welt" action="AvgNo0" rename="Welt_2" />
+            <SummarizeField field="F_A_Z_" action="AvgNo0" rename="FAZ_2" />
+            <SummarizeField field="Fr__Rundschau" action="AvgNo0" rename="FR_2" />
+            <SummarizeField field="Süddeutsche" action="AvgNo0" rename="SZ_2" />
+            <SummarizeField field="tageszeitung" action="AvgNo0" rename="TZ_2" />
+            <SummarizeField field="Bild" action="AvgNo0" rename="Bild_2" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="93">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="4014" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="94">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="4110" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="GKZ" />
+            <Field field="Kreisname" />
+            <Field field="BIP je Einwohner" />
+            <Field field="Jahr" />
+            <Field field="ALQ" />
+            <Field field="Partei" />
+            <Field field="Value" />
+            <Field field="Monat" />
+            <Field field="ZZ Ausland Prozent je Einwohner" />
+          </GroupFields>
+          <HeaderField field="MEDIUM" />
+          <DataField field="Gew_Avg_Tonalität_3" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="GKZ" size="255" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Kreisname" size="255" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="BIP je Einwohner" scale="1" size="19" source="CrossTab:Group:Sum:" type="FixedDecimal" />
+            <Field name="Jahr" size="1073741823" source="CrossTab:Group:Sum:" type="V_WString" />
+            <Field name="ALQ" scale="1" size="19" source="CrossTab:Group:Sum:" type="FixedDecimal" />
+            <Field name="Partei" size="14" source="CrossTab:Group:Sum:" type="String" />
+            <Field name="Value" source="CrossTab:Group:Sum:" type="Double" />
+            <Field name="Monat" size="19" source="CrossTab:Group:Sum:" type="V_WString" />
+            <Field name="ZZ Ausland Prozent je Einwohner" scale="3" size="19" source="CrossTab:Group:Sum:" type="FixedDecimal" />
+            <Field name="Bild" source="CrossTab:Header:MEDIUM:Bild:Sum:" type="Double" />
+            <Field name="Die_Welt" source="CrossTab:Header:MEDIUM:Die Welt:Sum:" type="Double" />
+            <Field name="F_A_Z_" source="CrossTab:Header:MEDIUM:F.A.Z.:Sum:" type="Double" />
+            <Field name="Fr__Rundschau" source="CrossTab:Header:MEDIUM:Fr. Rundschau:Sum:" type="Double" />
+            <Field name="Süddeutsche" source="CrossTab:Header:MEDIUM:Süddeutsche:Sum:" type="Double" />
+            <Field name="tageszeitung" source="CrossTab:Header:MEDIUM:tageszeitung:Sum:" type="Double" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="GKZ" order="Asc" />
+            <Field field="Kreisname" order="Asc" />
+            <Field field="BIP je Einwohner" order="Asc" />
+            <Field field="Jahr" order="Asc" />
+            <Field field="ALQ" order="Asc" />
+            <Field field="Partei" order="Asc" />
+            <Field field="Value" order="Asc" />
+            <Field field="Monat" order="Asc" />
+            <Field field="ZZ Ausland Prozent je Einwohner" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="95">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="4206" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="GKZ" action="GroupBy" rename="GKZ" />
+            <SummarizeField field="Kreisname" action="GroupBy" rename="Kreisname" />
+            <SummarizeField field="Jahr" action="GroupBy" rename="Jahr" />
+            <SummarizeField field="MONAT" action="GroupBy" rename="MONAT" />
+            <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+            <SummarizeField field="ZZ Ausland Prozent je Einwohner" action="AvgNo0" rename="AvgNo0_ZZ Ausland Prozent je Einwohner" />
+            <SummarizeField field="value" action="AvgNo0" rename="value" />
+            <SummarizeField field="BIP je Einwohner" action="AvgNo0" rename="AvgNo0_BIP je Einwohner" />
+            <SummarizeField field="ALQ" action="AvgNo0" rename="ALQ" />
+            <SummarizeField field="Die_Welt" action="AvgNo0" rename="Welt_3" />
+            <SummarizeField field="F_A_Z_" action="AvgNo0" rename="FAZ_3" />
+            <SummarizeField field="Fr__Rundschau" action="AvgNo0" rename="FR_3" />
+            <SummarizeField field="Süddeutsche" action="AvgNo0" rename="SZ_3" />
+            <SummarizeField field="tageszeitung" action="AvgNo0" rename="TZ_3" />
+            <SummarizeField field="Bild" action="AvgNo0" rename="Bild_3" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="96">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="4014" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="97">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+        <Position x="4302" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <JoinByRecPos value="False" />
+          <JoinFields>
+            <JoinInfo connection="#1">
+              <Field field="MONAT" />
+              <Field field="Partei" />
+              <Field field="GKZ" />
+            </JoinInfo>
+            <JoinInfo connection="#2">
+              <Field field="MONAT" />
+              <Field field="Partei" />
+              <Field field="GKZ" />
+            </JoinInfo>
+            <JoinInfo connection="#3">
+              <Field field="MONAT" />
+              <Field field="Partei" />
+              <Field field="GKZ" />
+            </JoinInfo>
+          </JoinFields>
+          <CartesianMode>Error</CartesianMode>
+          <OutputJoinOnly value="False" />
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Input_#2_GKZ" selected="False" rename="Input_#2_GKZ" />
+                <SelectField field="Input_#2_Kreisname" selected="True" rename="Input_#2_Kreisname" />
+                <SelectField field="Input_#2_Jahr" selected="False" rename="Input_#2_Jahr" />
+                <SelectField field="Input_#2_MONAT" selected="False" rename="Input_#2_MONAT" />
+                <SelectField field="Input_#2_Partei" selected="False" rename="Input_#2_Partei" />
+                <SelectField field="Input_#2_AvgNo0_ZZ Ausland Prozent je Einwohner" selected="False" rename="Input_#2_AvgNo0_ZZ Ausland Prozent je Einwohner" />
+                <SelectField field="Input_#2_value" selected="False" rename="Input_#2_value" />
+                <SelectField field="Input_#2_AvgNo0_BIP je Einwohner" selected="True" rename="Input_#2_AvgNo0_BIP je Einwohner" />
+                <SelectField field="Input_#2_ALQ" selected="False" rename="Input_#2_ALQ" />
+                <SelectField field="Input_#3_GKZ" selected="False" rename="Input_#3_GKZ" />
+                <SelectField field="Input_#3_Kreisname" selected="True" rename="Input_#3_Kreisname" />
+                <SelectField field="Input_#3_Jahr" selected="False" rename="Input_#3_Jahr" />
+                <SelectField field="Input_#3_MONAT" selected="False" rename="Input_#3_MONAT" />
+                <SelectField field="Input_#3_Partei" selected="False" rename="Input_#3_Partei" />
+                <SelectField field="Input_#3_AvgNo0_ZZ Ausland Prozent je Einwohner" selected="False" rename="Input_#3_AvgNo0_ZZ Ausland Prozent je Einwohner" />
+                <SelectField field="Input_#3_value" selected="False" rename="Input_#3_value" />
+                <SelectField field="Input_#3_AvgNo0_BIP je Einwohner" selected="True" rename="Input_#3_AvgNo0_BIP je Einwohner" />
+                <SelectField field="Input_#3_ALQ" selected="False" rename="Input_#3_ALQ" />
+                <SelectField field="Input_#2_Bundesland" selected="False" rename="Input_#2_Bundesland" />
+                <SelectField field="Input_#2_Wahlkreis" selected="False" rename="Input_#2_Wahlkreis" />
+                <SelectField field="Input_#2_BIP" selected="False" rename="Input_#2_BIP" />
+                <SelectField field="Input_#3_Bundesland" selected="False" rename="Input_#3_Bundesland" />
+                <SelectField field="Input_#3_Wahlkreis" selected="False" rename="Input_#3_Wahlkreis" />
+                <SelectField field="Input_#3_BIP" selected="False" rename="Input_#3_BIP" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+    </Node>
+    <Node ToolID="98">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="4398" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="AvgNo0_ZZ Ausland Prozent je Einwohner" selected="True" rename="ZZ_Aus" />
+            <SelectField field="AvgNo0_BIP je Einwohner" selected="True" rename="BIP" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="99">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="4014" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Right_Partei" selected="False" />
+            <SelectField field="Anzahl Wertung" selected="False" />
+            <SelectField field="DateTime_Month" selected="False" />
+            <SelectField field="Tonalität-1" selected="False" />
+            <SelectField field="Tonalität-2" selected="False" />
+            <SelectField field="Tonalität-3" selected="False" />
+            <SelectField field="Tonalität-4" selected="False" />
+            <SelectField field="Tonalität-5" selected="False" />
+            <SelectField field="Tonalität-6" selected="False" />
+            <SelectField field="Tonalität-7" selected="False" />
+            <SelectField field="Tonalität-8" selected="False" />
+            <SelectField field="Tonalität-9" selected="False" />
+            <SelectField field="Avg_Tonalität_3" selected="False" />
+            <SelectField field="Avg_Tonalität_1" selected="False" />
+            <SelectField field="Avg_Tonalität_2" selected="False" />
+            <SelectField field="Avg_Tonalität_6" selected="False" />
+            <SelectField field="Gew_Avg_Tonalität_3" selected="True" type="FixedDecimal" size="19.3" />
+            <SelectField field="Gew_Avg_Tonalität_1" selected="True" type="FixedDecimal" size="19.3" />
+            <SelectField field="Gew_Avg_Tonalität_2" selected="True" type="FixedDecimal" size="19.3" />
+            <SelectField field="Gew_Avg_Tonalität_6" selected="True" type="FixedDecimal" size="19.3" />
+            <SelectField field="Right_Jahr" selected="False" />
+            <SelectField field="ZZ Ausland Prozent je Einwohner" selected="True" rename="ZZ_Aus" />
+            <SelectField field="Ausländer_innen_" selected="False" />
+            <SelectField field="Einwohner" selected="False" />
+            <SelectField field="Right_Bundesland" selected="False" />
+            <SelectField field="Right_Einwohner" selected="False" />
+            <SelectField field="Gesamtauflage" selected="False" />
+            <SelectField field="Standort-&#xA;Auflage" selected="False" />
+            <SelectField field="Right_Wahlkreis" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="100">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="4110" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="GKZ" action="GroupBy" rename="GKZ" />
+            <SummarizeField field="Kreisname" action="GroupBy" rename="Kreisname" />
+            <SummarizeField field="Jahr" action="GroupBy" rename="Jahr" />
+            <SummarizeField field="Land" action="GroupBy" rename="Land" />
+            <SummarizeField field="MONAT" action="GroupBy" rename="MONAT" />
+            <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+            <SummarizeField field="BIP je Einwohner" action="AvgNo0" rename="BIP" />
+            <SummarizeField field="ALQ" action="AvgNo0" rename="ALQ" />
+            <SummarizeField field="ZZ_Aus" action="AvgNo0" rename="ZZ_Aus" />
+            <SummarizeField field="Value" action="AvgNo0" rename="Value" />
+            <SummarizeField field="Gew_Tonalität" action="AvgNo0" rename="Gew_Tonalität" />
+            <SummarizeField field="Gew_Tonalität-1" action="AvgNo0" rename="Gew_Tonalität-1" />
+            <SummarizeField field="Gew_Tonalität-2" action="AvgNo0" rename="Gew_Tonalität-2" />
+            <SummarizeField field="Gew_Tonalität-3" action="AvgNo0" rename="Gew_Tonalität-3" />
+            <SummarizeField field="Gew_Tonalität-4" action="AvgNo0" rename="Gew_Tonalität-4" />
+            <SummarizeField field="Gew_Tonalität-5" action="AvgNo0" rename="Gew_Tonalität-5" />
+            <SummarizeField field="Gew_Tonalität-6" action="AvgNo0" rename="Gew_Tonalität-6" />
+            <SummarizeField field="Gew_Tonalität-7" action="AvgNo0" rename="Gew_Tonalität-7" />
+            <SummarizeField field="Gew_Tonalität-8" action="AvgNo0" rename="Gew_Tonalität-8" />
+            <SummarizeField field="Gew_Tonalität-9" action="AvgNo0" rename="Gew_Tonalität-9" />
+            <SummarizeField field="Gew_Avg_Tonalität_3" action="AvgNo0" rename="Gew_Avg_Tonalität_3" />
+            <SummarizeField field="Gew_Avg_Tonalität_1" action="AvgNo0" rename="Gew_Avg_Tonalität_1" />
+            <SummarizeField field="Gew_Avg_Tonalität_2" action="AvgNo0" rename="Gew_Avg_Tonalität_2" />
+            <SummarizeField field="Gew_Avg_Tonalität_6" action="AvgNo0" rename="Gew_Avg_Tonalität_6" />
+            <SummarizeField field="Standortauflage je 100 Einwohner" action="AvgNo0" rename="Standortauflage je 100 Einwohner" />
+            <SummarizeField field="Sum_Standort-&#xA;Auflage" action="Sum" rename="Sum_Sum_Standort-&#xA;Auflage" />
+            <SummarizeField field="Tonalität" action="AvgNo0" rename="AvgNo0_Tonalität" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="128">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="294" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[SPD]/[gültig]" field="Prozent SPD" size="19.2" type="FixedDecimal" />
+            <FormulaField expression="[CDU/CSU]/[gültig]" field="Prozent CDU" size="19.2" type="FixedDecimal" />
+            <FormulaField expression="[FDP]/[gültig]" field="Prozent FDP" size="19.2" type="FixedDecimal" />
+            <FormulaField expression="[Grüne]/[gültig]" field="Prozent Grüne" size="19.2" type="FixedDecimal" />
+            <FormulaField expression="[DIE LINKE]/[gültig]" field="Prozent Linke" size="19.2" type="FixedDecimal" />
+            <FormulaField expression="[Andere]/[gültig]" field="Prozent Andere" size="19.2" type="FixedDecimal" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Prozent SPD = [SPD]/[gültig]
+Prozent CDU = [CDU/CSU]/[gültig]
+Prozent FDP = [FDP...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="129">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="390" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Sum_Wahlberechtigte A" selected="False" />
+            <SelectField field="Sum_Wahlberechtigte ohne Sperrvermerk A1" selected="False" />
+            <SelectField field="Sum_Wahlberechtigte mit Sperrvermerk A2" selected="False" />
+            <SelectField field="Sum_Anzahl der Wahlberechtigten A§" selected="False" />
+            <SelectField field="Sum_Anzahl der Wähler B" selected="False" />
+            <SelectField field="Sum_Anzahl der Wähler mit Wahlschein B1" selected="False" />
+            <SelectField field="Sum_ungültig" selected="False" />
+            <SelectField field="Sum_gültig" selected="False" />
+            <SelectField field="Sum_SPD" selected="False" />
+            <SelectField field="Sum_CDU/CSU" selected="False" />
+            <SelectField field="Sum_FDP" selected="False" />
+            <SelectField field="Sum_DIE LINKE" selected="False" />
+            <SelectField field="Sum_Grüne" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="130">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="486" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="Land" />
+            <Field field="GKZ" />
+            <Field field="Kreis " />
+            <Field field="Jahr" />
+            <Field field="Monat" />
+          </KeyFields>
+          <DataFields>
+            <Field field="Land" selected="False" />
+            <Field field="GKZ" selected="False" />
+            <Field field="Kreis " selected="False" />
+            <Field field="Wahlberechtigte" selected="False" />
+            <Field field="Wähler" selected="False" />
+            <Field field="Ungültig" selected="False" />
+            <Field field="Gültig" selected="False" />
+            <Field field="SPD" selected="False" />
+            <Field field="CDU/CSU" selected="False" />
+            <Field field="Grüne" selected="False" />
+            <Field field="FDP" selected="False" />
+            <Field field="Die Linke" selected="False" />
+            <Field field="Andere" selected="False" />
+            <Field field="Jahr" selected="False" />
+            <Field field="Monat" selected="False" />
+            <Field field="Prozent SPD" selected="True" />
+            <Field field="Prozent CDU" selected="True" />
+            <Field field="Prozent FDP" selected="True" />
+            <Field field="Prozent Grüne" selected="True" />
+            <Field field="Prozent Linke" selected="True" />
+            <Field field="Prozent Andere" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="131">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="582" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Name" selected="True" rename="Partei" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="132">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="654" y="462" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([Partei],'Prozent ','')" field="Partei" size="14" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Partei = Replace([Partei],'Prozent ','')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="140">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="3726" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="141">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="3822" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Zuzüge Ausland]/([Sum_Einwohner]/100)" field="ZZ Ausland Prozent je Einwohner" size="19.3" type="FixedDecimal" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[ZZ Ausland Prozent je Einwohner = [Zuzüge Ausland]/([Sum_Einwohner]/100)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="146">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="3726" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="GKZ" action="GroupBy" rename="GKZ" />
+            <SummarizeField field="Kreis " action="GroupBy" rename="Kreis " />
+            <SummarizeField field="Land" action="GroupBy" rename="Land" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="147">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="3618" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">C:\Users\admin\Documents\Wahlen und Medien\Data\MakrosVars2.xlsx|||MakroVars</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>MakrosVars2.xlsx
+Table=MakroVars</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="148">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="4254" y="666" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="If [Partei]='SPD' then 1&#xA;elseif [Partei]='Union' then 2 &#xA;elseif [Partei]='Grüne' then 3 &#xA;elseif [Partei]='FDP' then 4&#xA;elseif [Partei]='Linke' then 5   else 6 endif" field="partei_code" size="1073741823" type="V_WString" />
+            <FormulaField expression="[GKZ]+[partei_code]" field="ID" size="1073741823" type="V_WString" />
+            <FormulaField expression="If [Partei]='SPD' then 1&#xA;elseif [Partei]='Union' then 2 &#xA;elseif [Partei]='Grüne' then 1 &#xA;elseif [Partei]='FDP' then 2&#xA;elseif [Partei]='Linke' then 2   else 2 endif" field="Regierung" size="1" type="Byte" />
+            <FormulaField expression="log(value/(1-value))" field="lvalue" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>partei_code = If [Partei]='SPD' then 1
+elseif [Partei]='Union' then 2 
+elseif [P...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="149">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="4362" y="666" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ID" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="166">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2910" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="64" MaxRecords="">C:\Users\admin\Documents\Wahlen und Medien\Data\Neuer Ordner\Tonalität_Table.hyper</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Tonalität_Table.hyper</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="170">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="3474" y="1002" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="If [MEDIUM]='Bild'  or [MEDIUM]='Die Welt' or [MEDIUM]='F.A.Z.' then 'Right' else 'Left' endif" field="Media Slant" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Media Slant = If [MEDIUM]='Bild'  or [MEDIUM]='Die Welt' or [MEDIUM]='F.A.Z.' th...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="171">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="3606" y="1014" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="GKZ" action="GroupBy" rename="GKZ" />
+            <SummarizeField field="Kreisname" action="GroupBy" rename="Kreisname" />
+            <SummarizeField field="Jahr" action="GroupBy" rename="Jahr" />
+            <SummarizeField field="Land" action="GroupBy" rename="Land" />
+            <SummarizeField field="MONAT" action="GroupBy" rename="MONAT" />
+            <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+            <SummarizeField field="Media Slant" action="GroupBy" rename="Media Slant" />
+            <SummarizeField field="BIP je Einwohner" action="AvgNo0" rename="BIP" />
+            <SummarizeField field="ALQ" action="AvgNo0" rename="ALQ" />
+            <SummarizeField field="ZZ_Aus" action="AvgNo0" rename="ZZ_Aus" />
+            <SummarizeField field="Value" action="AvgNo0" rename="Value" />
+            <SummarizeField field="Gew_Tonalität" action="AvgNo0" rename="Gew_Tonalität" />
+            <SummarizeField field="Gew_Tonalität-1" action="AvgNo0" rename="Gew_Tonalität-1" />
+            <SummarizeField field="Gew_Tonalität-2" action="AvgNo0" rename="Gew_Tonalität-2" />
+            <SummarizeField field="Gew_Tonalität-3" action="AvgNo0" rename="Gew_Tonalität-3" />
+            <SummarizeField field="Gew_Tonalität-4" action="AvgNo0" rename="Gew_Tonalität-4" />
+            <SummarizeField field="Gew_Tonalität-5" action="AvgNo0" rename="Gew_Tonalität-5" />
+            <SummarizeField field="Gew_Tonalität-6" action="AvgNo0" rename="Gew_Tonalität-6" />
+            <SummarizeField field="Gew_Tonalität-7" action="AvgNo0" rename="Gew_Tonalität-7" />
+            <SummarizeField field="Gew_Tonalität-8" action="AvgNo0" rename="Gew_Tonalität-8" />
+            <SummarizeField field="Gew_Tonalität-9" action="AvgNo0" rename="Gew_Tonalität-9" />
+            <SummarizeField field="Gew_Avg_Tonalität_3" action="AvgNo0" rename="Gew_Avg_Tonalität_3" />
+            <SummarizeField field="Gew_Avg_Tonalität_1" action="AvgNo0" rename="Gew_Avg_Tonalität_1" />
+            <SummarizeField field="Gew_Avg_Tonalität_2" action="AvgNo0" rename="Gew_Avg_Tonalität_2" />
+            <SummarizeField field="Gew_Avg_Tonalität_6" action="AvgNo0" rename="Gew_Avg_Tonalität_6" />
+            <SummarizeField field="Standortauflage je 100 Einwohner" action="AvgNo0" rename="Standortauflage je 100 Einwohner" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="172">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="3690" y="1014" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="If [Partei]='SPD' then 1&#xA;elseif [Partei]='Union' then 2 &#xA;elseif [Partei]='Grüne' then 3 &#xA;elseif [Partei]='FDP' then 4&#xA;elseif [Partei]='Linke' then 5   else 6 endif" field="partei_code" size="1073741823" type="V_WString" />
+            <FormulaField expression="[GKZ]+[partei_code]" field="ID" size="1073741823" type="V_WString" />
+            <FormulaField expression="If [Partei]='SPD' then 1&#xA;elseif [Partei]='Union' then 2 &#xA;elseif [Partei]='Grüne' then 1 &#xA;elseif [Partei]='FDP' then 2&#xA;elseif [Partei]='Linke' then 2   else 2 endif" field="Regierung" size="1" type="Byte" />
+            <FormulaField expression="log(value/(1-value))" field="lvalue" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>partei_code = If [Partei]='SPD' then 1
+elseif [Partei]='Union' then 2 
+elseif [P...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="173">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="3798" y="1014" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ID" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="177">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="4650" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="GKZ" />
+            <Field field="MONAT" />
+            <Field field="Partei" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="GKZ" />
+            <Field field="MONAT" />
+            <Field field="Partei" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_GKZ" selected="True" input="Left_" />
+                <SelectField field="Left_Kreisname" selected="True" input="Left_" />
+                <SelectField field="Left_Jahr" selected="True" input="Left_" />
+                <SelectField field="Left_Land" selected="True" input="Left_" />
+                <SelectField field="Left_MONAT" selected="True" input="Left_" />
+                <SelectField field="Left_Partei" selected="True" input="Left_" />
+                <SelectField field="Left_BIP" selected="True" input="Left_" />
+                <SelectField field="Left_ALQ" selected="True" input="Left_" />
+                <SelectField field="Left_ZZ_Aus" selected="True" input="Left_" />
+                <SelectField field="Left_Value" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Tonalität" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Tonalität_1" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Tonalität_2" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Tonalität_3" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Tonalität_4" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Tonalität_5" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Tonalität_6" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Tonalität_7" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Tonalität_8" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Tonalität_9" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Avg_Tonalität_3" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Avg_Tonalität_1" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Avg_Tonalität_2" selected="True" input="Left_" />
+                <SelectField field="Left_Gew_Avg_Tonalität_6" selected="True" input="Left_" />
+                <SelectField field="Left_Standortauflage_je_100_Einwohner" selected="True" input="Left_" />
+                <SelectField field="Left_partei_code" selected="True" input="Left_" />
+                <SelectField field="Left_ID" selected="True" input="Left_" />
+                <SelectField field="Left_Regierung" selected="True" input="Left_" />
+                <SelectField field="Left_lvalue" selected="True" input="Left_" />
+                <SelectField field="Right_GKZ" selected="False" rename="Right_GKZ" input="Right_" />
+                <SelectField field="Right_Kreisname" selected="False" rename="Right_Kreisname" input="Right_" />
+                <SelectField field="Right_Jahr" selected="False" rename="Right_Jahr" input="Right_" />
+                <SelectField field="Right_Land" selected="False" rename="Right_Land" input="Right_" />
+                <SelectField field="Right_MONAT" selected="False" rename="Right_MONAT" input="Right_" />
+                <SelectField field="Right_Partei" selected="False" rename="Right_Partei" input="Right_" />
+                <SelectField field="Right_BIP" selected="False" rename="Right_BIP" input="Right_" />
+                <SelectField field="Right_ALQ" selected="False" rename="Right_ALQ" input="Right_" />
+                <SelectField field="Right_ZZ_Aus" selected="False" rename="Right_ZZ_Aus" input="Right_" />
+                <SelectField field="Right_Value" selected="True" rename="First_Value" input="Right_" />
+                <SelectField field="Right_Gew_Tonalität" selected="False" rename="Right_Gew_Tonalität" input="Right_" />
+                <SelectField field="Right_Gew_Avg_Tonalität_3" selected="False" rename="Right_Gew_Avg_Tonalität_3" input="Right_" />
+                <SelectField field="Right_Gew_Avg_Tonalität_1" selected="False" rename="Right_Gew_Avg_Tonalität_1" input="Right_" />
+                <SelectField field="Right_Gew_Avg_Tonalität_2" selected="False" rename="Right_Gew_Avg_Tonalität_2" input="Right_" />
+                <SelectField field="Right_Gew_Avg_Tonalität_6" selected="False" rename="Right_Gew_Avg_Tonalität_6" input="Right_" />
+                <SelectField field="Right_Sum_Sum_Standort-&#xA;Auflage" selected="True" rename="Standortauflage" input="Right_" />
+                <SelectField field="Right_AvgNo0_Tonalität" selected="True" rename="Tonalität" input="Right_" />
+                <SelectField field="Right_partei_code" selected="False" rename="Right_partei_code" input="Right_" />
+                <SelectField field="Right_ID" selected="False" rename="Right_ID" input="Right_" />
+                <SelectField field="Right_Regierung" selected="False" rename="Right_Regierung" input="Right_" />
+                <SelectField field="Right_lvalue" selected="False" rename="Right_lvalue" input="Right_" />
+                <SelectField field="Right_Stadt" selected="True" input="Right_" />
+                <SelectField field="Right_Ost" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="178">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="4350" y="570" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="46" SearchSubDirs="False" RecordLimit="">C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav</File>
+          <FormatSpecificOptions>
+            <ExpandFactors>True</ExpandFactors>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Kreis_Panel_First.sav</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="GKZ" size="511" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="V_WString" />
+            <Field name="Kreisname" size="511" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="V_WString" />
+            <Field name="Jahr" size="32767" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="V_WString" />
+            <Field description="TextToColumns: Parsed from © Der Bundeswahlleiter" name="Land" size="509" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="V_WString" />
+            <Field name="MONAT" size="58" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="V_WString" />
+            <Field name="Partei" size="29" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="V_WString" />
+            <Field name="BIP" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="ALQ" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="ZZ_Aus" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Value" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Tonalität" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Tonalität_1" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Tonalität_2" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Tonalität_3" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Tonalität_4" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Tonalität_5" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Tonalität_6" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Tonalität_7" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Tonalität_8" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Tonalität_9" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Avg_Tonalität_3" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Avg_Tonalität_1" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Avg_Tonalität_2" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Gew_Avg_Tonalität_6" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Standortauflage_je_100_Einwohner" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="partei_code" size="32767" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="V_WString" />
+            <Field name="ID" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="Regierung" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+            <Field name="lvalue" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_First.sav" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="179">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="4518" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="If Contains([Kreisname],'Landkreis') then 0&#xA;elseif Contains([Kreisname],'Kreis') then 0&#xA;else 1 endif" field="Stadt" size="1" type="Byte" />
+            <FormulaField expression="If Land ='MV' or Land='BB' or Land='BE' or Land ='SN' or [Land]='ST' or [Land]='TH' then 1 &#xA;else 0 endif" field="Ost" size="1" type="Byte" />
+            <FormulaField expression="If Land ='MV' or Land='NI' or Land='HB' or Land ='HH' or [Land]='SH'  then 1 &#xA;else 0 endif" field="Nord" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Stadt = If Contains([Kreisname],'Landkreis') then 0
+elseif Contains([Kreisname],...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="180">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="4446" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Land" action="GroupBy" rename="Land" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="181">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="5346" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="GKZ" action="GroupBy" rename="GKZ" />
+            <SummarizeField field="Kreisname" action="GroupBy" rename="Kreisname" />
+            <SummarizeField field="Standortauflage" action="First" rename="First_Standortauflage" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="182">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="5646" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="First_Standortauflage" action="Min" rename="Min_First_Standortauflage" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="183">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="5742" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="First_Standortauflage" action="Max" rename="Max_First_Standortauflage" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="184">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="5730" y="570" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="First_Standortauflage" action="Avg" rename="Avg_First_Standortauflage" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="185">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="5730" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="First_Standortauflage" action="Median" rename="Median_First_Standortauflage" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="186">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="5718" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="First_Standortauflage" action="StdDev" rename="StdDev_First_Standortauflage" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="198">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="4302" y="1074" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\admin\Documents\Wahlen und Medien\Data\Partisan_Values.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Partisan_Values.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="MONAT" size="19" source="Summarize: GroupBy - MONAT" type="V_WString" />
+            <Field name="Avg_PCI_G" source="Summarize: AvgNo0 - PCI_G" type="Double" />
+            <Field name="GKZ" size="20" source="Formula: Left([GKZ],5)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="199">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="4494" y="1026" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="GKZ" />
+            <Field field="MONAT" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="GKZ" />
+            <Field field="MONAT" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_MONAT" selected="True" rename="Right_MONAT" input="Right_" />
+                <SelectField field="Right_GKZ" selected="True" rename="Right_GKZ" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="208">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4985" y="941" width="158.7758" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 208</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="207">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="5010" y="990" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_Tonalität_Help.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Kreis_Panel_Tonalität_Help.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="209">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="3846" y="930" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="46">C:\Users\admin\Documents\Wahlen und Medien\Data\STATA_Panel_Medium_Auflage.sav</File>
+          <Passwords />
+          <FormatSpecificOptions />
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>STATA_Panel_Medium_Auflage.sav</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="210">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="3786" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="GKZ" />
+            <Field field="Kreisname" />
+            <Field field="Datum" />
+            <Field field="Partei" />
+            <Field field="Value" />
+          </GroupFields>
+          <HeaderField field="MEDIUM" />
+          <DataField field="Standortauflage je 100 Einwohner" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="GKZ" size="255" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Kreisname" size="255" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="Datum" size="1073741823" source="CrossTab:Group:Sum:" type="V_WString" />
+            <Field name="Partei" size="14" source="CrossTab:Group:Sum:" type="String" />
+            <Field name="Value" source="CrossTab:Group:Sum:" type="Double" />
+            <Field name="Bild" source="CrossTab:Header:MEDIUM:Bild:Sum:" type="Double" />
+            <Field name="Die_Welt" source="CrossTab:Header:MEDIUM:Die Welt:Sum:" type="Double" />
+            <Field name="F_A_Z_" source="CrossTab:Header:MEDIUM:F.A.Z.:Sum:" type="Double" />
+            <Field name="Fr__Rundschau" source="CrossTab:Header:MEDIUM:Fr. Rundschau:Sum:" type="Double" />
+            <Field name="Süddeutsche" source="CrossTab:Header:MEDIUM:Süddeutsche:Sum:" type="Double" />
+            <Field name="tageszeitung" source="CrossTab:Header:MEDIUM:tageszeitung:Sum:" type="Double" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="GKZ" order="Asc" />
+            <Field field="Kreisname" order="Asc" />
+            <Field field="Datum" order="Asc" />
+            <Field field="Partei" order="Asc" />
+            <Field field="Value" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="194">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4109" y="821" width="158.7758" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 194</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="193">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="4134" y="870" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">C:\Users\admin\Documents\Wahlen und Medien\Data\Instrument_Medium_1501.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Instrument_Medium_1501.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="195">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4349" y="905" width="158.7758" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 195</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="174">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="4434" y="1122" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_Slant.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Kreis_Panel_Slant.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="175">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="4374" y="954" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="46">C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel_Slannt.sav</File>
+              <Passwords />
+              <FormatSpecificOptions />
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Kreis_Panel_Slannt.sav</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="196">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4097" y="689" width="158.7758" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 196</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="165">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="4122" y="738" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="25" MaxRecords="">C:\Users\admin\Documents\Wahlen und Medien\Data\Neuer Ordner\Kreis_Panel_Graph.xlsx|||Sheet1</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <SkipFieldNames>False</SkipFieldNames>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Kreis_Panel_Graph.xlsx
+Table=Sheet1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="197">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3797" y="677" width="158.7758" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 197</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="145">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="3822" y="726" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="25" MaxRecords="">C:\Users\admin\Documents\Wahlen und Medien\Data\MakrosVars.xlsx|||Makro</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <SkipFieldNames>False</SkipFieldNames>
+                <OutputOption>RemoveFile</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>MakrosVars.xlsx
+Table=Makro</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="192">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="5154" y="642" width="169" height="433" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Tonalität</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="187">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="5239" y="919" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Tonalität" action="Avg" rename="Avg_Tonalität" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="188">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="5227" y="847" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Tonalität" action="Median" rename="Median_Tonalität" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="189">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="5239" y="991" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Tonalität" action="StdDev" rename="StdDev_Tonalität" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="190">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="5203" y="775" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Tonalität" action="Min" rename="Min_Tonalität" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="191">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="5179" y="691" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Tonalität" action="Max" rename="Max_Tonalität" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="169">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4866" y="606" width="158.7758" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 169</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="167">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="4891" y="655" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Kreis_Panel.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="168">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4842" y="438" width="158.7758" height="149" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 168</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="161">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="4867" y="487" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="46">C:\Users\admin\Documents\Wahlen und Medien\Data\Kreis_Panel.sav</File>
+              <Passwords />
+              <FormatSpecificOptions />
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Kreis_Panel.sav</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="162">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4722" y="1002" width="259.7299" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Instrument Tonalität nicht im BL</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="151">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="4747" y="1087" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="MONAT" action="GroupBy" rename="MONAT" />
+                <SummarizeField field="Land" action="GroupBy" rename="Land" />
+                <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+                <SummarizeField field="Gew_Tonalität" action="Sum" rename="Sum_Gew_Tonalität" />
+                <SummarizeField field="Gew_Tonalität-1" action="Sum" rename="Sum_Gew_Tonalität-1" />
+                <SummarizeField field="Gew_Tonalität-2" action="Sum" rename="Sum_Gew_Tonalität-2" />
+                <SummarizeField field="Gew_Tonalität-3" action="Sum" rename="Sum_Gew_Tonalität-3" />
+                <SummarizeField field="Gew_Tonalität-4" action="Sum" rename="Sum_Gew_Tonalität-4" />
+                <SummarizeField field="Gew_Tonalität-5" action="Sum" rename="Sum_Gew_Tonalität-5" />
+                <SummarizeField field="Gew_Tonalität-6" action="Sum" rename="Sum_Gew_Tonalität-6" />
+                <SummarizeField field="Gew_Tonalität-7" action="Sum" rename="Sum_Gew_Tonalität-7" />
+                <SummarizeField field="Gew_Tonalität-8" action="Sum" rename="Sum_Gew_Tonalität-8" />
+                <SummarizeField field="Gew_Tonalität-9" action="Sum" rename="Sum_Gew_Tonalität-9" />
+                <SummarizeField field="Gew_Avg_Tonalität_3" action="Sum" rename="Sum_Gew_Avg_Tonalität_3" />
+                <SummarizeField field="Gew_Avg_Tonalität_1" action="Sum" rename="Sum_Gew_Avg_Tonalität_1" />
+                <SummarizeField field="Gew_Avg_Tonalität_2" action="Sum" rename="Sum_Gew_Avg_Tonalität_2" />
+                <SummarizeField field="Gew_Avg_Tonalität_6" action="Sum" rename="Sum_Gew_Avg_Tonalität_6" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="152">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="4747" y="1171" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Land" action="GroupBy" rename="Land" />
+                <SummarizeField field="MONAT" action="GroupBy" rename="MONAT" />
+                <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+                <SummarizeField field="GKZ" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="153">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="4927" y="1051" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Land" />
+                <Field field="MONAT" />
+                <Field field="Partei" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Land" />
+                <Field field="MONAT" />
+                <Field field="Partei" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_MONAT" selected="True" rename="Right_MONAT" input="Right_" />
+                    <SelectField field="Right_Land" selected="True" rename="Right_Land" input="Right_" />
+                    <SelectField field="Right_Partei" selected="True" rename="Right_Partei" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="154">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="5131" y="1075" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Land" />
+                <Field field="MONAT" />
+                <Field field="Partei" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Land" />
+                <Field field="MONAT" />
+                <Field field="Partei" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_Right_MONAT" selected="False" rename="Left_Right_MONAT" input="Left_" />
+                    <SelectField field="Left_Right_Land" selected="False" rename="Left_Right_Land" input="Left_" />
+                    <SelectField field="Left_Right_Partei" selected="False" rename="Left_Right_Partei" input="Left_" />
+                    <SelectField field="Right_Land" selected="False" rename="Right_Land" input="Right_" />
+                    <SelectField field="Right_MONAT" selected="False" rename="Right_MONAT" input="Right_" />
+                    <SelectField field="Right_Partei" selected="False" rename="Right_Partei" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="155">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="5383" y="1075" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Land] = "HH"</Expression>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Land</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-05-04 11:10:52</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>HH</Operand>
+                  <StartDate>2020-05-04 11:10:52</StartDate>
+                  <EndDate>2020-05-04 11:10:52</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Land] = "HH"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="156">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="5527" y="1051" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Land" action="GroupBy" rename="Land" />
+                <SummarizeField field="MONAT" action="GroupBy" rename="MONAT" />
+                <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+                <SummarizeField field="Gew_Avg_Tonalität_3" action="Avg" rename="Hamburg" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="157">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="5395" y="1183" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Land] = "BE"</Expression>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Land</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2020-05-04 11:10:52</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>BE</Operand>
+                  <StartDate>2020-05-04 11:10:52</StartDate>
+                  <EndDate>2020-05-04 11:10:52</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Land] = "BE"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="158">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="5539" y="1159" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Land" action="GroupBy" rename="Land" />
+                <SummarizeField field="MONAT" action="GroupBy" rename="MONAT" />
+                <SummarizeField field="Partei" action="GroupBy" rename="Partei" />
+                <SummarizeField field="Gew_Avg_Tonalität_3" action="Avg" rename="Berlin" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="159">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="5899" y="1123" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="If Land='HH'  then [Hamburg] elseif  Land ='BE' then [Berlin] else &#xA;([Sum_Gew_Avg_Tonalität_3]-[Gew_Avg_Tonalität_3])/([Count]-1)&#xA;endif&#xA;" field="Inst_Gew_Avg_Ton_3" size="19.4" type="FixedDecimal" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Inst_Gew_Avg_Ton_3 = If Land='HH'  then [Hamburg] elseif  Land ='BE' then [Berli...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="160">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+            <Position x="5719" y="1123" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <JoinByRecPos value="False" />
+              <JoinFields>
+                <JoinInfo connection="#1">
+                  <Field field="MONAT" />
+                  <Field field="Partei" />
+                </JoinInfo>
+                <JoinInfo connection="#2">
+                  <Field field="MONAT" />
+                  <Field field="Partei" />
+                </JoinInfo>
+                <JoinInfo connection="#3">
+                  <Field field="MONAT" />
+                  <Field field="Partei" />
+                </JoinInfo>
+              </JoinFields>
+              <CartesianMode>Error</CartesianMode>
+              <OutputJoinOnly value="False" />
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Input_#2_Land" selected="True" rename="Input_#2_Land" />
+                    <SelectField field="Input_#2_MONAT" selected="True" rename="Input_#2_MONAT" />
+                    <SelectField field="Input_#2_Partei" selected="True" rename="Input_#2_Partei" />
+                    <SelectField field="Input_#3_Land" selected="True" rename="Input_#3_Land" />
+                    <SelectField field="Input_#3_MONAT" selected="True" rename="Input_#3_MONAT" />
+                    <SelectField field="Input_#3_Partei" selected="True" rename="Input_#3_Partei" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="127">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3029" y="173" width="493" height="305" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>MakroVars</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="120">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="3054" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\admin\Documents\Wahlen und Medien\Macro Data\Arbeitsmarkt\Aufbereitet\Arbeitsmarkt.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Arbeitsmarkt.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="GKZ" size="255" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Gemeindenamen_Media+Election.xlsx|||`GKZ$`" type="V_String" />
+                <Field name="Gemeindename" size="255" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Gemeindenamen_Media+Election.xlsx|||`GKZ$`" type="V_String" />
+                <Field name="Right_GKZ" size="255" source="Formula: Left([GKZ],5)" type="V_WString" />
+                <Field name="Kreisname" size="255" source="(Multiple Sources)" type="V_WString" />
+                <Field name="ALZ" source="(Multiple Sources)" type="Double" />
+                <Field name="Datum" size="1073741823" source="(Multiple Sources)" type="V_WString" />
+                <Field name="ALQ" scale="1" size="19" source="(Multiple Sources)" type="FixedDecimal" />
+                <Field description="Formula: If [Kreisname]=[Row-1:Kreisname] then [Row-1:ALQ]&#xA;else Null()&#xA;endif" name="ALQ-1" scale="0" size="19" source="Formula: If [Kreisname]=[Row-1:Kreisname] then [Row-1:ALQ]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+                <Field description="Formula: If [Kreisname]=[Row-2:Kreisname] then [Row-2:ALQ]&#xA;else Null()&#xA;endif" name="ALQ-2" scale="2" size="19" source="Formula: If [Kreisname]=[Row-2:Kreisname] then [Row-2:ALQ]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+                <Field description="Formula: If [Kreisname]=[Row-3:Kreisname] then [Row-3:ALQ]&#xA;else Null()&#xA;endif" name="ALQ-3" scale="2" size="19" source="Formula: If [Kreisname]=[Row-3:Kreisname] then [Row-3:ALQ]&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+                <Field description="Formula: If [Kreisname]=[Row-1:Kreisname] then ([ALQ]+[Row-1:ALQ])/2&#xA;else Null()&#xA;endif" name="Avg_ALQ-1" scale="2" size="19" source="Formula: If [Kreisname]=[Row-1:Kreisname] then ([ALQ]+[Row-1:ALQ])/2&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+                <Field description="Formula: If [Kreisname]=[Row-2:Kreisname] then ([ALQ]+[Row-1:ALQ]+[Row-2:ALQ])/3&#xA;else Null()&#xA;endif" name="Avg_ALQ-2" scale="2" size="19" source="Formula: If [Kreisname]=[Row-2:Kreisname] then ([ALQ]+[Row-1:ALQ]+[Row-2:ALQ])/3&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+                <Field description="Formula: If [Kreisname]=[Row-3:Kreisname] then ([ALQ]+[Row-1:ALQ]+[Row-2:ALQ]+[Row-3:ALQ])/4&#xA;else Null()&#xA;endif" name="Avg_ALQ-3" scale="2" size="19" source="Formula: If [Kreisname]=[Row-3:Kreisname] then ([ALQ]+[Row-1:ALQ]+[Row-2:ALQ]+[Row-3:ALQ])/4&#xA;else Null()&#xA;endif" type="FixedDecimal" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="121">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="3054" y="378" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\admin\Documents\Wahlen und Medien\Macro Data\Migration\Aufbereitet\Migration.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Migration.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="GKZ" size="255" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Gemeindenamen_Media+Election.xlsx|||`GKZ$`" type="V_String" />
+                <Field name="Gemeindename" size="255" source="File: C:\Users\admin\Documents\Wahlen und Medien\Data\Gemeindenamen_Media+Election.xlsx|||`GKZ$`" type="V_String" />
+                <Field description="Formula: If IsNull(GKZ) then [Row-1:GKZ]&#xA;else [GKZ]&#xA;endif" name="Right_GKZ" size="255" source="Formula: If [GKZ]='03241001' then '03241'&#xA;elseif [GKZ]='02' then '02000'&#xA;elseif [GKZ]='05334002' then '05354'&#xA;else [GKZ] &#xA;endif" type="V_String" />
+                <Field description="Formula: If IsNull(F2) then [Row-1:F2]&#xA;else [F2]&#xA;endif" name="Gemeinde" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Jahr" size="1073741823" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Zuzüge Ausland" scale="0" size="19" source="Formula: If [Ausländer_innen_]='-' then Null()&#xA;else [Ausländer_innen_]&#xA;endif" type="FixedDecimal" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="122">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="3246" y="354" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="GKZ" />
+                <Field field="Jahr" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="GKZ" />
+                <Field field="Jahr" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Left_Right_GKZ" selected="True" rename="Left_Right_GKZ" input="Left_" />
+                    <SelectField field="Left_ALQ-1" selected="False" input="Left_" />
+                    <SelectField field="Left_ALQ-3" selected="False" input="Left_" />
+                    <SelectField field="Right_GKZ" selected="True" rename="Right_GKZ" input="Right_" />
+                    <SelectField field="Right_Gemeindename" selected="True" rename="Right_Gemeindename" input="Right_" />
+                    <SelectField field="Right_Right_GKZ" selected="True" rename="Right_Right_GKZ" input="Right_" />
+                    <SelectField field="Right_Jahr" selected="True" rename="Right_Jahr" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="123">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="3150" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="Left(Datum,4)" field="Jahr" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Jahr = Left(Datum,4)
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="124">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="3150" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">C:\Users\admin\Documents\Wahlen und Medien\Macro Data\VGR\Aufbereitet\VGR.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>VGR.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="GKZ" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Kreisname" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="BIP je Einwohner" scale="1" size="19" source="Formula: [_CurrentField_]" type="FixedDecimal" />
+                <Field name="Jahr" size="1073741823" source="Formula: (Multiple Sources)" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="125">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="3438" y="258" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="GKZ" />
+                <Field field="Jahr" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="GKZ" />
+                <Field field="Jahr" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_GKZ" selected="True" rename="Right_GKZ" input="Right_" />
+                    <SelectField field="Right_Kreisname" selected="True" rename="Right_Kreisname" input="Right_" />
+                    <SelectField field="Right_Jahr" selected="True" rename="Right_Jahr" input="Right_" />
+                    <SelectField field="Right_Right_GKZ" selected="True" rename="Right_Right_GKZ" input="Right_" />
+                    <SelectField field="Right_Right_Right_GKZ" selected="True" rename="Right_Right_Right_GKZ" input="Right_" />
+                    <SelectField field="Right_Right_Jahr" selected="True" rename="Right_Right_Jahr" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="126">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="3294" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="If [GKZ]='02' then '02000'&#xA;else [GKZ]&#xA;endif&#xA;" field="GKZ" size="255" type="V_String" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[GKZ = If [GKZ]='02' then '02000'
+else [GKZ]
+endif
+
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="103">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4590" y="378" width="155" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Output</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="101">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="4615" y="427" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File FileFormat="19" MaxRecords="">C:\Users\admin\Documents\Wahlen und Medien\Data\Panel_Kreise_Medium.yxdb</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <NoSpatialIndex>False</NoSpatialIndex>
+                <SaveSource>True</SaveSource>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Panel_Kreise_Medium.yxdb</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="128" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="True" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="False" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="69" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="132" Connection="Output" />
+      <Destination ToolID="69" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Join" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="72" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="72" Connection="True" />
+      <Destination ToolID="73" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="77" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="77" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Join" />
+      <Destination ToolID="78" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="Output" />
+      <Destination ToolID="82" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="82" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="Output" />
+      <Destination ToolID="81" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="80" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Output" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="82" Connection="Join" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="85" Connection="Join" />
+      <Destination ToolID="140" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="85" Connection="Right" />
+      <Destination ToolID="140" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="Right" />
+      <Destination ToolID="146" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="85" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Join" />
+      <Destination ToolID="85" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="166" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="88" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="88" Connection="Output" />
+      <Destination ToolID="97" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="97" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="97" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="True" />
+      <Destination ToolID="90" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="True" />
+      <Destination ToolID="93" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="True" />
+      <Destination ToolID="96" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="True" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="90" Connection="Output" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="91" Connection="Output" />
+      <Destination ToolID="92" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="93" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="96" Connection="Output" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="97" Connection="Output" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="98" Connection="Output" />
+      <Destination ToolID="101" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="165" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="170" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="193" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="210" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="148" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="128" Connection="Output" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="130" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="130" Connection="Output" />
+      <Destination ToolID="131" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="131" Connection="Output" />
+      <Destination ToolID="132" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="140" Connection="Output" />
+      <Destination ToolID="141" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="146" Connection="Output" />
+      <Destination ToolID="145" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="148" Connection="Output" />
+      <Destination ToolID="149" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="151" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="152" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="153" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="Output" />
+      <Destination ToolID="153" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="179" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="180" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="199" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="198" Connection="Output" />
+      <Destination ToolID="199" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="170" Connection="Output" />
+      <Destination ToolID="171" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="171" Connection="Output" />
+      <Destination ToolID="172" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="172" Connection="Output" />
+      <Destination ToolID="173" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="173" Connection="Output" />
+      <Destination ToolID="175" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="173" Connection="Output" />
+      <Destination ToolID="174" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Join" />
+      <Destination ToolID="167" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Join" />
+      <Destination ToolID="161" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Join" />
+      <Destination ToolID="181" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Join" />
+      <Destination ToolID="187" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Join" />
+      <Destination ToolID="188" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Join" />
+      <Destination ToolID="189" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Join" />
+      <Destination ToolID="190" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Join" />
+      <Destination ToolID="191" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="177" Connection="Join" />
+      <Destination ToolID="207" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="178" Connection="Output" />
+      <Destination ToolID="177" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="179" Connection="Output" />
+      <Destination ToolID="177" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="181" Connection="Output" />
+      <Destination ToolID="184" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="181" Connection="Output" />
+      <Destination ToolID="185" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="181" Connection="Output" />
+      <Destination ToolID="186" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="181" Connection="Output" />
+      <Destination ToolID="182" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="181" Connection="Output" />
+      <Destination ToolID="183" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="210" Connection="Output" />
+      <Destination ToolID="209" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="152" Connection="Output" />
+      <Destination ToolID="154" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="153" Connection="Join" />
+      <Destination ToolID="154" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="154" Connection="Join" />
+      <Destination ToolID="155" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="154" Connection="Join" />
+      <Destination ToolID="157" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="154" Connection="Join" />
+      <Destination ToolID="160" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="156" Connection="Output" />
+      <Destination ToolID="160" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="158" Connection="Output" />
+      <Destination ToolID="160" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="155" Connection="True" />
+      <Destination ToolID="156" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="157" Connection="True" />
+      <Destination ToolID="158" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Output" />
+      <Destination ToolID="159" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="Output" />
+      <Destination ToolID="123" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="122" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="122" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="Join" />
+      <Destination ToolID="125" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="126" Connection="Output" />
+      <Destination ToolID="125" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Join" />
+      <Destination ToolID="147" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Kreis ab M+E</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
