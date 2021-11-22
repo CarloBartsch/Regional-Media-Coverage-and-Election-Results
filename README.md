@@ -6,9 +6,13 @@ This paper studies the impact of media coverage on voting behavior by measuring 
 
 ## Datenaufbereitung
 -erklären wie die beiden Datensätze ursprünglich aufbereitet wurden
+
+Zusammenführung und Aufbereitung der einzelnen Datensätze wurde in [Alteryx](https://www.alteryx.com/de/) durchgeführt.
+
 "Media Distribution Gesamt" (MDG) und "Election Result Kreis Gesamt" (ERKG) müssen über die Gemeindekennziffer (GKZ) verbunden werden. 
 MDG: Jahresspalten müssen angeglichen werden, da MDG im Zweijahresrhytmus und ERKG im Jahresrhytmus. Hier wird jeweils der Mittelwert genommen. 
-
+GKZ wird angeglichen und mit dem Datum als ID benutzt um Datensätze zu joinen. Anschließend werden die Name der einzelnen Medien angeglichen und wiederum mit den Sentiment-Daten,über Datum, Partei und Medium bzw. Belegungseinheit gejoint. Die Sentiment-Daten wurde zuvor schon aufbereitet, so wurde die Tonalität berechnet und einzelnen Datensätze zusammengeführt, Datumsfelder erstellt, etc..
+Es folgen Schritte zur Berechnung der Standortauflage pro 100 Anwohner, Dummy-Daten zur VGR, zum Arbeitsmarkt und zur Migration werden gejoint und angepasst. Daten werden auf Wahlmonate (200209, 200509) gefiltert.
 
 ## Do-Files
 ### Aktuell
