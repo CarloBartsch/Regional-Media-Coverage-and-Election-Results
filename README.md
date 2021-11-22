@@ -11,9 +11,11 @@ MDG: Jahresspalten müssen angeglichen werden, da MDG im Zweijahresrhytmus und E
 
 
 ## Do-Files
-
+### Aktuell
+Enthält sämtliche OLS-Schätzungen die im Laufe des Papers ausprobiert wurden.
+### Aktuell_Instrument
+Enthält sämtliche Instrument-Schätzungen die im Laufe des Papers ausprobiert wurden. Das Instrument variiert dabei.
 ### Aktuell_Kurzfassung:
-
-
-### Aktuell-Instrument_Kurzfassung:
+Enthält nur den Code des zuletzt im Paper verwendeten OLS-Schätzungen. 
+### Aktuell_Instrument_Kurzfassung:
 Enthält nur den Code des zuletzt im Paper verwendeten Instrument-Schätzungen. Das Instrument setzt sich jeweils aus 20 zufälligen Kreisen (10 konservative und 10 linke nach PCI) zusammen. Schätzungen werden jeweils mit "2sls" und "ivreg2" durchgeführt.
