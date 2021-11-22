@@ -8,3 +8,12 @@ This paper studies the impact of media coverage on voting behavior by measuring 
 -erklären wie die beiden Datensätze ursprünglich aufbereitet wurden
 "Media Distribution Gesamt" (MDG) und "Election Result Kreis Gesamt" (ERKG) müssen über die Gemeindekennziffer (GKZ) verbunden werden. 
 MDG: Jahresspalten müssen angeglichen werden, da MDG im Zweijahresrhytmus und ERKG im Jahresrhytmus. Hier wird jeweils der Mittelwert genommen. 
+
+
+## Do-Files
+
+### Aktuell_Kurzfassung:
+
+
+### Aktuell-Instrument_Kurzfassung:
+Enthält nur den Code des zuletzt im Paper verwendeten Instrument-Schätzungen. Das Instrument setzt sich jeweils aus 20 zufälligen Kreisen (10 konservative und 10 linke nach PCI) zusammen. Schätzungen werden jeweils mit "2sls" und "ivreg2" durchgeführt.
