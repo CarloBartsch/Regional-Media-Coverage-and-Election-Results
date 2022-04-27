@@ -5,7 +5,7 @@ This paper studies the impact of media coverage on voting behavior by measuring 
 
 
 ## Datenaufbereitung
--erklären wie die beiden Datensätze ursprünglich aufbereitet wurden
+
 
 Zusammenführung und Aufbereitung der einzelnen Datensätze wurde in [Alteryx](https://www.alteryx.com/de/) durchgeführt.
 
